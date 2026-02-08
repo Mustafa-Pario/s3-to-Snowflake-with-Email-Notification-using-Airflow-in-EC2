@@ -2,6 +2,11 @@
 
 This project automates data ingestion from Amazon S3 to Snowflake using Apache Airflow running on an EC2 instance, with email notifications for task success or failure.
 
+<p align="center">
+  <img width="1000" height="550" alt="Project_Diagram"
+       src="https://github.com/user-attachments/assets/24faced3-1a39-4346-a1fa-74927dafc95d" />
+</p>
+
 ## 📌 Project Overview
 
 The goal of this project is to build an end-to-end, production-style data pipeline that:
