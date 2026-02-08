@@ -1,0 +1,22 @@
+DROP DATABASE IF EXISTS city_database;
+CREATE DATABASE IF NOT EXISTS city_database;
+CREATE WAREHOUSE IF NOT EXISTS city_warehouse;
+CREATE SCHEMA new_city_schema;
+
+
+CREATE OR REPLACE STAGE city_database.new_city_schema.snowflake_ext_stage_yml url="s3://airflow-snow-email-mustafa/"
+credentials=(aws_key_id='#######'
+aws_secret_key='#######');
+
+
+list @city_database.new_city_schema.snowflake_ext_stage_yml;
+
+CREATE OR REPLACE FILE FORMAT csv_format
+ TYPE = 'CSV'
+ FIELD_DELIMITER = ','
+ RECORD_DELIMITER = '\n'
+ SKIP_HEADER = 1;
+
+
+
+ select * from city_info
