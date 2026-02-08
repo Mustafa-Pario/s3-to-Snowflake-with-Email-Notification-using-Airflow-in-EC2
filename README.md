@@ -51,8 +51,8 @@ This simulates a real-world data engineering use case with cloud services and or
 
 ### Before running this project, make sure you have:
 
-- AWS account with:
- - S3 bucket
+AWS account with:
+- S3 bucket
 
 - EC2 instance
 
@@ -71,11 +71,11 @@ Configure the following in Airflow UI:
 
 ### Connections
 
-- aws_default
- - AWS Access Key
- - AWS Secret Key
+aws_default
+- AWS Access Key
+- AWS Secret Key
 
-- snowflake_default
+snowflake_default
   - Account
   - Username
   - Password
@@ -84,7 +84,7 @@ Configure the following in Airflow UI:
   - Schema
   - Email
 
-- Configure SMTP settings in airflow.cfg
+Configure SMTP settings in airflow.cfg
   - Enable email_on_failure and/or email_on_success
  
 ## 🚀 How It Works
